@@ -1,5 +1,6 @@
 \documentclass[12pt, letterpaper]{article}
 \usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 
@@ -8,25 +9,39 @@
 
 \title{MTH 4140 Homework 1}
 \author{Yaohui Wu}
-\date{\today \\ Due by February 8, 2024}
+\date{February 14, 2024}
 
 \begin{document}
 \maketitle
-\tableofcontents
-\section{Section 1.1}
-\subsection{Problem 9}
+\section*{Problem 1}
+\subsection*{Section 1.1 Problem 9}
 \begin{solution}
-    
+    Let the graph on the left be \(G\) and the graph on the right be \(H\). It
+    is equivalent to show that \(G\cong\overline{H}\). If we label every vertex
+    in \(G\) then two vertices are adjacent if and only if they are adjacent in
+    \(\overline{H}\). Therefore, it is proved that \(G\cong\overline{H}\) so
+    \(\overline{G}\cong H\).
 \end{solution}
 
-\subsection{Problem 17}
+\section*{Problem 2}
+\subsection*{Section 1.1 Problem 17}
 \begin{solution}
-    
+    We know that \(G\cong H\iff\overline{G}\cong\overline{H}\) so it is
+    equivalent to count all 2-regular graphs on 7 vertices. Only the graph
+    \(C_7\) and the graph with only \(C_3,C_4\) satisfy this. Therefore, the
+    number of isomorphic classes of simple 7-vertex 4-regular graphs is 2.
 \end{solution}
 
-\subsection{Problem 19}
+\section*{Problem 3}
+\subsection*{Section 1.1 Problem 25}
 \begin{solution}
-    
+    Suppose the Peterson graph has \(C_7\) then there are 3 remaining vertices
+    outside of \(C_7\). The Peterson graph is 3-regular so each of the 7
+    vertices on \(C_7\) has one extra edge outside of \(C_7\). The Peterson
+    graph has girth 5 so the 7 extra edges have to have one of the 3 remaining
+    vertices as an endpoint. By the pigeonhole principle, at least 3 of the
+    extra edges end on the same vertex. WLOG, we will have a \(C_3\) but the
+    Peterson graph has girth 5 so there is a contradiction. Therefore, it is
+    proved that the Peterson graph does not have a cycle of length 7.
 \end{solution}
-
 \end{document}
