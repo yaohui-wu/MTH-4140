@@ -18,12 +18,24 @@
 \begin{solution}
     Let the graph on the left be \(G\) and the graph on the right be \(H\). It
     is equivalent to show that \(G\cong\overline{H}\). If we label every vertex
-    in \(G\) then two vertices are adjacent if and only if they are adjacent in
-    \(\overline{H}\). Therefore, it is proved that \(G\cong\overline{H}\) so
-    \(\overline{G}\cong H\).
+    in \(G\) and \(H\) using the same set of labels then two vertices are
+    adjacent in \(G\) if and only if they are adjacent in \(\overline{H}\).
+    Therefore, it is proved that \(G\cong\overline{H}\) so \(\overline{G}\cong H\).
 \end{solution}
 
 \section*{Problem 2}
+\subsection*{Section 1.1 Problem 10}
+\begin{solution}
+    We have a disconnected graph \(G\) and its complement \(\overline{G}\). Let
+    \(u, v\) be two vertices of different components in \(G\) s.t. there is no
+    path from \(u\) to \(v\). Then \(u, v\) are adjacent in \(\overline{G}\) and
+    all other vertices in \(\overline{G}\) are adjacent to one of \(u, v\) or
+    both since \(u, v\) have no common neighbors. There is a path for any two
+    vertices in \(\overline{G}\) using \(u,v\). Therefore, it is proved that the
+    complement of a simple disconnected graph must be connected.
+\end{solution}
+
+\section*{Problem 3}
 \subsection*{Section 1.1 Problem 17}
 \begin{solution}
     We know that \(G\cong H\iff\overline{G}\cong\overline{H}\) so it is
@@ -32,7 +44,7 @@
     number of isomorphic classes of simple 7-vertex 4-regular graphs is 2.
 \end{solution}
 
-\section*{Problem 3}
+\section*{Problem 4}
 \subsection*{Section 1.1 Problem 25}
 \begin{solution}
     Suppose the Peterson graph has \(C_7\) then there are 3 remaining vertices
@@ -43,5 +55,18 @@
     extra edges end on the same vertex. WLOG, we will have a \(C_3\) but the
     Peterson graph has girth 5 so there is a contradiction. Therefore, it is
     proved that the Peterson graph does not have a cycle of length 7.
+\end{solution}
+
+\section*{Problem 5}
+\subsection*{Section 1.1 Problem 26}
+\begin{solution}
+    If \(G\) has girth 4 then there are two adjacent vertices \(u, v\) with no
+    common neighbors. Since \(G\) is k-regular and \(u,v\) each has degree
+    \(k-1\), the sum of the degrees is at least \(k-1+1+1+k-1=2k\). Therefore,
+    it is proved that \(G\) has at least \(2k\) vertices. If each vertex in the
+    independent set \(\{x_1,\dots,x_{k}\}\) is adjacent to all vertices of
+    the independent set \(\{y_1,\dots,y_{k}\}\) then we have exactly \(2k\)
+    vertices. All such graphs with excatly \(2k\) vertices must be complete
+    bipartite graphs \(K_{n,n}\) where \(n=k\).
 \end{solution}
 \end{document}
