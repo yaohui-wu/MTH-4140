@@ -1,5 +1,5 @@
-\documentclass[12pt, letterpaper]{article}
-\usepackage[margin=1in]{geometry}
+\documentclass[12pt]{article}
+\usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
@@ -9,21 +9,39 @@
 
 \title{MTH 4140 Homework 1}
 \author{Yaohui Wu}
-\date{February 14, 2024}
+\date{February 18, 2024}
 
 \begin{document}
 \maketitle
 \section*{Problem 1}
+\subsection*{Section 1.1 Problem 8}
+\begin{solution}
+    Let the graph on the left be \(G\) and we label its vertices using
+    \(\{a,b,c,d,e,f,g,h\}\). The vertices for the outer square are \(\{a,b\}\)
+    from left to right on the top and \(\{c,d\}\) from left to right on the
+    bottom respectively. Similarly, the vertices for the inner square are
+    \(\{e,f\}\) from left to right on the top and \(\{g,h\}\) from left to right
+    on the bottom respectively. We can decompose \(G\) into 4 copies of \(K_3\)
+    with the center being the vertex of degree 3. They are \(\{a,e,f,g\}\) with
+    center \(e\), \(\{a,b,d,f\}\) with center \(b\), \(\{d,f,g,h\}\) with center
+    \(h\), and \(\{a,c,d,g\}\) with center \(c\). We can also decompose \(G\)
+    into 4 copies of \(P_4\). They are the \(a,e\)-path \(\{a,b,f,e\}\), the
+    \(b,f\)-path \(\{b,d,h,f\}\), the \(d,h\)-path \(\{d,c,g,h\}\), and the
+    \(c,g\)-path \(\{c,a,e,g\}\). Therefore, it is shown that \(G\) decomposes
+    into copies of \(K_3\) and also into copies of \(P_4\).
+\end{solution}
+
+\section*{Problem 2}
 \subsection*{Section 1.1 Problem 9}
 \begin{solution}
     Let the graph on the left be \(G\) and the graph on the right be \(H\). It
     is equivalent to show that \(G\cong\overline{H}\). If we label every vertex
     in \(G\) and \(H\) using the same set of labels then two vertices are
     adjacent in \(G\) if and only if they are adjacent in \(\overline{H}\).
-    Therefore, it is proved that \(G\cong\overline{H}\) so \(\overline{G}\cong H\).
+    Therefore, we have \(G\cong\overline{H}\) so it is proved that \(\overline{G}\cong H\).
 \end{solution}
 
-\section*{Problem 2}
+\section*{Problem 3}
 \subsection*{Section 1.1 Problem 10}
 \begin{solution}
     We have a disconnected graph \(G\) and its complement \(\overline{G}\). Let
@@ -35,7 +53,33 @@
     complement of a simple disconnected graph must be connected.
 \end{solution}
 
-\section*{Problem 3}
+\section*{Problem 4}
+\subsection*{Section 1.1 Problem 11}
+\begin{solution}
+    Let's label the vertices in the middle as \(\{a,b,c,d\}\) from left to right respectively,
+    the top vertex as \(e\), and the bottom vertex as \(f\). We can see that the
+    graph \(G\) has a clique of size 4 with vertices \(\{a,b,e,f\}\). Suppose
+    \(G\) has a clique of size greater than 4 then there must be at least 5 vertices
+    with a degree of at least 4. However, \(G\) only has 4 vertices with a degree
+    of at least 4 so there is a contradiction. Therefore, it is shown that the
+    maximum size of a clique in \(G\) is 4. All of the independent sets in \(G\)
+    are \(\{a,c\},\{a,d\},\{b,d\},\{e\},\{f\}\). There is not a set of three or more
+    vertices s.t. any two vertices in the set are not adjacent. Therefore, it
+    is shown that the maximum size of an independent set in \(G\) is 2.
+\end{solution}
+
+\section*{Problem 5}
+\subsection*{Section 1.1 Problem 12}
+\begin{solution}
+    The Petersen graph is not bipartite because it has odd cycles. The independent
+    set of the Petersen graph must have vertices that are 2-element subsets of
+    \(\{1,2,3,4,5\}\) with a common element. The 2-element subsets of the largest
+    independent set are the combination of any element \(n\in\{1,2,3,4,5\}\) and
+    the rest of the 4 elements in \(\{1,2,3,4,5\}-\{n\}\). Therefore, the size of
+    the largest independent set of the Petersen graph is 4.
+\end{solution}
+
+\section*{Problem 6}
 \subsection*{Section 1.1 Problem 17}
 \begin{solution}
     We know that \(G\cong H\iff\overline{G}\cong\overline{H}\) so it is
@@ -44,20 +88,31 @@
     number of isomorphic classes of simple 7-vertex 4-regular graphs is 2.
 \end{solution}
 
-\section*{Problem 4}
+\section*{Problem 7}
+\subsection*{Section 1.1 Problem 19}
+\begin{solution}
+    Let the graphs be \(G,H,F\) from left to right respectively. There is a
+    corresponding relationship between the vertices of \(H\) and \(F\). If we
+    label all vertices in one of the two graphs then we can also label all of
+    the vertices in the other graph to have the same properties of adjacency.
+    However, this is not true for \(G\) because \(G\) is bipartite and \(H,F\)
+    are not bipartite. Therefore, it is shown that \(H\cong F\).
+\end{solution}
+
+\section*{Problem 8}
 \subsection*{Section 1.1 Problem 25}
 \begin{solution}
-    Suppose the Peterson graph has \(C_7\) then there are 3 remaining vertices
-    outside of \(C_7\). The Peterson graph is 3-regular so each of the 7
-    vertices on \(C_7\) has one extra edge outside of \(C_7\). The Peterson
+    Suppose the Petersen graph has \(C_7\) then there are 3 remaining vertices
+    outside of \(C_7\). The Petersen graph is 3-regular so each of the 7
+    vertices on \(C_7\) has one extra edge outside of \(C_7\). The Petersen
     graph has girth 5 so the 7 extra edges have to have one of the 3 remaining
     vertices as an endpoint. By the pigeonhole principle, at least 3 of the
     extra edges end on the same vertex. WLOG, we will have a \(C_3\) but the
-    Peterson graph has girth 5 so there is a contradiction. Therefore, it is
-    proved that the Peterson graph does not have a cycle of length 7.
+    Petersen graph has girth 5 so there is a contradiction. Therefore, it is
+    proved that the Petersen graph does not have a cycle of length 7.
 \end{solution}
 
-\section*{Problem 5}
+\section*{Problem 9}
 \subsection*{Section 1.1 Problem 26}
 \begin{solution}
     If \(G\) has girth 4 then there are two adjacent vertices \(u, v\) with no
@@ -66,7 +121,51 @@
     it is proved that \(G\) has at least \(2k\) vertices. If each vertex in the
     independent set \(\{x_1,\dots,x_{k}\}\) is adjacent to all vertices of
     the independent set \(\{y_1,\dots,y_{k}\}\) then we have exactly \(2k\)
-    vertices. All such graphs with excatly \(2k\) vertices must be complete
+    vertices. All such graphs with exactly \(2k\) vertices must be complete
     bipartite graphs \(K_{n,n}\) where \(n=k\).
+\end{solution}
+
+\section{Problem 10}
+\subsubsection*{Section 1.2 Problem 3}
+\begin{solution}
+    The graph \(G\) has 4 components and they are \(\{1\},\{11\},\{13\}\), and \\
+    \(\{2,3,4,5,6,7,8,9,10,12,14,15\}\). We have a \(7,5\)-path \(\{7,14,2,4,8,10,12,3,6,9,15,5\}\)
+    because any two consecutive integers both have a greatest common factor
+    greater than 1. This path travels every vertex in the largest component of
+    \(G\) so it is the path with the longest length. The maximum length of a
+    path in \(G\) is 12.
+\end{solution}
+
+\section*{Problem 11}
+\subsection*{Problem A}
+\begin{solution}
+    Let the three husbands be \(A,B,C\) and their wives be \(a,b,c\) respectively.
+    The steps to cross the river from \(L\) to \(R\) are
+    \begin{enumerate}
+        \item \(A,a\rightarrow R\)
+        \item \(L\leftarrow A\)
+        \item \(b,c\rightarrow R\)
+        \item \(L\leftarrow a\)
+        \item \(B,C\rightarrow R\)
+        \item \(L\leftarrow B,b\)
+        \item \(A,B\rightarrow R\)
+        \item \(L\leftarrow c\)
+        \item \(a,c\rightarrow R\)
+        \item \(L\leftarrow B\)
+        \item \(B,b\rightarrow R\)
+    \end{enumerate}
+\end{solution}
+
+\section*{Problem 12}
+\subsection*{Problem B}
+\begin{solution}
+    Let \(K_n\) be a simple connected complete graph of \(n\) vertices s.t.
+    every vertex has degree \(n-1\) and \(K_n\) has \(\binom{n}{2}=\frac{n(n-1)}{2}\)
+    edges. \(K_n\) has the maximum number of edges that a simple connected graph
+    of \(n\) vertices can have because any two vertices in \(K_n\) are adjacent
+    hence there is an edge for any pair of vertices. If \(G\) has the maximum
+    number of edges then it must have two components, \(K_9\) and an isolated
+    vertex \(v\). The number of edges of \(G\) is \(\frac{9(9-1)}{2}=36\).
+    Therefore, it is proved that \(G\) has at most 36 edges.
 \end{solution}
 \end{document}
