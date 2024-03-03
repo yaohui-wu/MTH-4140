@@ -1,14 +1,33 @@
 \documentclass[12pt]{article}
-\usepackage{geometry}
+\usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{amsthm}
+\usepackage{amssymb}
 
 \newenvironment*{solution}{\begin{proof}[solution]}{\end{proof}}
 \renewcommand*{\qedsymbol}{\(\blacksquare\)}
 
 \title{MTH 4140 Homework 2}
 \author{Yaohui Wu}
-\date{February 28, 2024}
+\date{March 3, 2024}
 
 \begin{document}
 \maketitle
+\section*{Problem 1}
+\subsection*{Section 1.3 Problem 9}
+\begin{solution}
+    Let \(G\) be a graph of 26 vertices from two sets of 13 vertices s.t. the
+    vertices represent the teams, the sets represent the divisions, and there
+    is an edge between two vertices if two teams play against each other. Let
+    \(H\) be a subgraph of \(G\) with 13 vertices in the same set s.t. it
+    represent 13 teams in the same division. Suppose the proposition is true,
+    each of the 13 vertices in \(H\) will have degree \(9\). Then the sum of
+    the degrees in \(H\) must be \(13\cdot9\) which must be odd. However, the
+    handshaking lemma states that for a graph \(G=(V,E)\) we have \(\sum_{deg
+    (v)\in V}=2|E|\), i.e. the sum of the degrees is twice the number of edges
+    which must be even. There is a contradiction and the proposition is false,
+    that which was to be demonstrated. Therefore, it is proved that for a
+    league with two divisions of 13 teams each, it is impossible to schedule a
+    season with each team playing nine games against teams within its division
+    and four games against teams in the other division.
+\end{solution}
 \end{document}
