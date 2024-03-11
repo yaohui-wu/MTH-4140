@@ -10,7 +10,7 @@
 
 \title{MTH 4140 Homework 2}
 \author{Yaohui Wu}
-\date{March 10, 2024}
+\date{March 11, 2024}
 
 \begin{document}
 \maketitle
@@ -65,7 +65,7 @@
     \(k\) and the vertex \(u\) having degree \(k-1\) in \(A\). \(G_1\) also
     has \(b\) vertices with degree \(k\) in \(B\). Then we have
     \begin{align*}
-        E(G_1)=(a-1)k+(k-1) &= b\cdot k \\ a\cdot k-k+k-1 &= b\cdot k \\ a
+        e(G_1)=(a-1)k+(k-1) &= b\cdot k \\ a\cdot k-k+k-1 &= b\cdot k \\ a
         \cdot k-1 &= b\cdot k \\ (a-b)k &= 1
     \end{align*}
     Since we are given that \(k\geq2\) so we have \((a-b)k\neq1\) hence there
@@ -75,19 +75,21 @@
 \section*{Problem 4}
 \subsection*{Section 1.3 Problem 61}
 \begin{solution}
-    Let \((d_1,d_2,\dots,d_n)\) be the degree sequence of the graph \(G\) with
-    \(n\) vertices. Then the degree sequence of \(\overline{G}\) is \((n-1-d_n
-    ,\dots,n-1-d_2,n-1-d_1)\). Since \(G\cong\overline{G}\) then the two
-    degree sequences of \(G\) and \(\overline{G}\) are exactly the same. Thus
-    we have \[(d_1,d_2,\dots,d_n)=(n-1-d_n,\dots,n-1-d_2,n-1-d_1)\] Given
-    that \(n\equiv1\pmod4\) hence we get that \(n\) is an odd number. Consider
-    the middle elements in both degree sequences, they are equal thus we have
+    Let \((d_1,d_2,\dots,d_{n(G)})\) be the degree sequence of the graph \(G\)
+    with \(n(G)\) vertices. Then the degree sequence of \(\overline{G}\) is \(
+    (n-1-d_{n(G)},\dots,n(G)-1-d_2,n(G)-1-d_1)\). Since \(G\cong\overline{G}\)
+    then the two degree sequences of \(G\) and \(\overline{G}\) are exactly
+    the same. Thus we have \[(d_1,d_2,\dots,d_{n(G)})=(n(G)-1-d_{n(G)},\dots,
+    n(G)-1-d_2,n(G)-1-d_1)\] Given that \(n(G)\equiv1\pmod4\) hence we have
+    that \(n(G)\) is an odd number. Consider the middle elements in both
+    degree sequences, they are equal thus we have
     \begin{align*}
-        d_{\frac{n+1}{2}} &= n-1-d_{\frac{n+1}{2}} \\ 2\cdot d_{\frac{n+1}{2}}
-        &= n-1 \\ d_{\frac{n+1}{2}} &= \frac{n-1}{2}
+        d_{\frac{n(G)+1}{2}} &= n(G)-1-d_{\frac{n(G)+1}{2}} \\ 2\cdot
+        d_{\frac{n(G)+1}{2}} &= n(G)-1 \\ d_{\frac{n(G)+1}{2}} &= 
+        \frac{n(G)-1}{2}
     \end{align*}
-    Therefore, it is proved that if \(G\cong\overline{G}\) and the number of
-    vertices in \(G\) is \(n\equiv1\pmod4\) then \(G\) has at least one vertex
-    with degree \(\frac{n-1}{2}\).
+    Therefore, it is proved that if \(G\cong\overline{G}\) and that \(n(G)
+    \equiv1\pmod4\) then \(G\) has at least one vertex with degree
+    \(\frac{n(G)-1}{2}\).
 \end{solution}
 \end{document}
