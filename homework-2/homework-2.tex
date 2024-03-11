@@ -20,7 +20,7 @@
     We apply the Havel-Hakimi algorithm then we have
     \begin{enumerate}[(a)]
         \item \((5,5,4,3,2,2,2,1)\implies(4,3,2,1,1,2,1)\implies(4,3,2,2,1,1,1
-        )\implies(2,1,1,0,1,1)\\\implies(2,1,1,1,1,0)\implies(0,0,1,1,0)
+        )\implies(2,1,1,0,1,1) \\ \implies(2,1,1,1,1,0)\implies(0,0,1,1,0)
         \implies(1,1,0,0,0)\implies(0,0,0,0)\)
         \item \((5,5,4,4,2,2,1,1)\implies(4,3,3,1,1,1,1)\implies(2,2,0,0,1,1)
         \implies(2,2,1,1,0,0)\implies(1,0,1,0,0)\implies(1,1,0,0,0)\implies(0,
@@ -28,7 +28,7 @@
         \item \((5,5,5,3,2,2,1,1)\implies(4,4,2,1,1,1,1)\implies(3,1,0,0,1,1)
         \implies(3,1,1,1,0,0)\implies(0,0,0,0,0)\)
         \item \((5,5,5,4,2,1,1,1)\implies(4,4,3,1,0,1,1)\implies(4,4,3,1,1,1,0
-        )\\\implies(3,2,0,0,1,0)\implies(3,2,1,0,0,0)\implies(1,0,-1,0,0)\)
+        )\ \\ implies(3,2,0,0,1,0)\implies(3,2,1,0,0,0)\implies(1,0,-1,0,0)\)
     \end{enumerate}
     Therefore, it is shown that \((5,5,4,3,2,2,2,1),(5,5,4,4,2,2,1,1),(5,5,5,3
     ,2,2,1,1)\) \\ are graphic sequences but \((5,5,5,4,2,1,1,1)\)  is not a
@@ -51,5 +51,25 @@
     league with two divisions of 13 teams each, it is impossible to schedule a
     season with each team playing nine games against teams within its division
     and four games against teams in the other division.
+\end{solution}
+\section*{Problem 3}
+\subsection*{Section 1 Problem 18}
+\begin{solution}
+    Suppose the proposition is true for the sake of contradiction. Let \(G\)
+    be a \(k\)-regular bipartite graph that has a cut edge \(e\) s.t. \(G-e\)
+    is not connected. Let \(A\) and \(B\) be the two independent sets of
+    vertices in \(G\). We remove \(e\) from \(G\) then \(G-e\) becomes a
+    disjoint union of 2 bipartite graphs \(G_1\) and \(G_2\). The endpoints of
+    \(e\) are the vertex \(u\in A\) in \(G_1\) and the vertex \(v\in B\) in
+    \(G_2\). \(G_1\) has \(a\) vertices with \(a-1\) vertices having degree
+    \(k\) and the vertex \(u\) having degree \(k-1\) in \(A\). \(G_1\) also
+    has \(b\) vertices with degree \(k\) in \(B\). Then we have
+    \begin{align*}
+        E(G_1)=(a-1)k+(k-1) &= b\cdot k \\ a\cdot k-k+k-1 &= b\cdot k \\ a
+        \cdot k-1 &= b\cdot k \\ (a-b)k &= 1
+    \end{align*}
+    Since we are given that \(k\geq2\) so we have \((a-b)k\neq1\) hence there
+    is a contradicition and the proposition is false. Therefore, it is proved
+    that for \(k\geq2\), a \(k\)-regular bipartite graph has no cut-edge.
 \end{solution}
 \end{document}
