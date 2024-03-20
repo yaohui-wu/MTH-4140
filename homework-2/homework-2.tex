@@ -129,16 +129,15 @@
 \section*{Problem 8}
 \subsection*{Section 1.3 Problem 29}
 \begin{solution}
-    Suppose that every tree does not have a leaf in its larger partite set or
-    both if they are equal size for the sake of contradiction. Let \(T\) be a
-    tree with \(n\) vertices s.t. we have two independent sets \(R\) and \(B\)
-    from the vertices of \(T\) with \(|R|\leq|B|\). Since \(|R|+|B|=n\) and \(
-    |R|\leq|B|\), then we have \(|B|\geq\frac{n}{2}\). Since \(B\) has no
-    leaves, hence every vertex in \(B\) has degree at least 2 so we have \[
-    e(T)=\sum_{v\in B}d(v)\geq2\cdot\frac{n}{2}=n\]However, \(T\) is a tree
-    with \(n\) vertices so it has \(n-1\) edges then we have \[e(T)\geq n\]
-    but \[e(T)=n-1\not\geq n\] so there is a contradiction. Therefore, it is
-    proved that every tree has a leaf in its larger partite set or in both if
-    they have equal size.
+    Suppose that every tree does not have a leaf in its larger partite set for
+    the sake of contradiction. Let \(T\) be a tree with \(n\) vertices s.t. we
+    have two independent sets \(R\) and \(B\) from the vertices of \(T\) with
+    \(|R|\leq|B|\). Since \(|R|+|B|=n\) and \(|R|\leq|B|\), then we have \(|B|
+    \geq\frac{n}{2}\). Since \(B\) has no leaves, hence every vertex in \(B\)
+    has degree at least 2 so we have \[e(T)=\sum_{v\in B}d(v)\geq2\cdot
+    \frac{n}{2}=n\]However, \(T\) is a tree with \(n\) vertices so it has \(
+    n-1\) edges then we have \[e(T)\geq n\] but \[e(T)=n-1\not\geq n\] so
+    there is a contradiction. Therefore, it is proved that every tree has a
+    leaf in its larger partite set or in both if they have equal size.
 \end{solution}
 \end{document}
