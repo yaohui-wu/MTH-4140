@@ -20,9 +20,9 @@
     We can choose a vertex \(v\) in \(2^k\) ways then we choose two of its
     neighbors in \(\binom{k}{2}\) ways to form a \(P_3\). There is four \(P_3
     \) for every \(C_4\) since we can choose an edge in a \(C_4\) to remove
-    then we get a \(P_3\). The number of copies of \(P_3\) is \(\binom{k}{2}2^
-    k\) and the number of copies of \(C_4\) is \(\frac{\binom{k}{2}2^k}{4}=
-    \binom{k}{2}2^{k-2}\) in \(Q_k\).
+    then we get a \(P_3\). Therefore, it is proved that the number of copies
+    of \(P_3\) is \(\binom{k}{2}2^k\) and the number of copies of \(C_4\) is
+    \(\frac{\binom{k}{2}2^k}{4}=\binom{k}{2}2^{k-2}\) in \(Q_k\).
 \end{solution}
 \section*{Problem 2}
 \subsection*{Section 1.3 Problem 8}
@@ -113,5 +113,17 @@
     Therefore, it is proved that if \(G\cong\overline{G}\) and that \(n(G)
     \equiv1\pmod4\) then \(G\) has at least one vertex with degree
     \(\frac{n(G)-1}{2}\).
+\end{solution}
+\section*{Problem 7}
+\subsection*{Section 2.1 Problem 12}
+\begin{solution}
+    Let \(u,v\) be any two vertices in \(K_{m,n}\). If \(u,v\) are in
+    different independent sets then they are adjacent so \(\text{d}(u,v)=1\).
+    If they are in the same set then they must have a common neighbor \(w\) in
+    the other set so \(\text{d}(u,v)=2\). The diameter is the maximum of the
+    distances so we have \(\text{diam}(K_{m,n})=2\). The eccentricity \(
+    \epsilon(v)\) is 2 for any vertex \(v\) in \(K_{m,n}\) so the radius is 2,
+    hence we get \(\text{diam}(K_{m,n})=\text{rad}(K_{m,n})=2\). Therefore, it
+    is proved that the diameter and radius of the bicilique \(K_{m,n}\) is 2.
 \end{solution}
 \end{document}
