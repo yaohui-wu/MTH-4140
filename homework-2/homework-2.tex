@@ -10,11 +10,21 @@
 
 \title{MTH 4140 Homework 2}
 \author{Yaohui Wu}
-\date{March 11, 2024}
+\date{March 19, 2024}
 
 \begin{document}
 \maketitle
 \section*{Problem 1}
+\subsection*{Section 1.3 Problem 5}
+\begin{solution}
+    We can choose a vertex \(v\) in \(2^k\) ways then we choose two of its
+    neighbors in \(\binom{k}{2}\) ways to form a \(P_3\). There is four \(P_3
+    \) for every \(C_4\) since we can choose an edge in a \(C_4\) to remove
+    then we get a \(P_3\). The number of copies of \(P_3\) is \(\binom{k}{2}2^
+    k\) and the number of copies of \(C_4\) is \(\frac{\binom{k}{2}2^k}{4}=
+    \binom{k}{2}2^{k-2}\) in \(Q_k\).
+\end{solution}
+\section*{Problem 2}
 \subsection*{Section 1.3 Problem 8}
 \begin{solution}
     We apply the Havel-Hakimi algorithm then we have
@@ -34,7 +44,7 @@
     ,2,2,1,1)\) \\ are graphic sequences but \((5,5,5,4,2,1,1,1)\)  is not a
     graphic sequence.
 \end{solution}
-\section*{Problem 2}
+\section*{Problem 3}
 \subsection*{Section 1.3 Problem 9}
 \begin{solution}
     Let \(G\) be a graph of 26 vertices from two sets of 13 vertices s.t. the
@@ -52,7 +62,7 @@
     season with each team playing nine games against teams within its division
     and four games against teams in the other division.
 \end{solution}
-\section*{Problem 3}
+\section*{Problem 4}
 \subsection*{Section 1.3 Problem 18}
 \begin{solution}
     Suppose the proposition is true for the sake of contradiction. Let \(G\)
@@ -72,7 +82,7 @@
     is a contradicition and the proposition is false. Therefore, it is proved
     that for \(k\geq2\), a \(k\)-regular bipartite graph has no cut-edge.
 \end{solution}
-\section*{Problem 4}
+\section*{Problem 5}
 \subsection*{Section 1.3 Problem 45}
 \begin{solution}
     The Kőnig's theorem states that a graph is bipartite if and only if it has
@@ -84,7 +94,7 @@
     cycles. Therefore, it is proved that the maximum number of edges in a
     bipartite subgraph of the Petersen graph is 12.
 \end{solution}
-\section*{Problem 5}
+\section*{Problem 6}
 \subsection*{Section 1.3 Problem 61}
 \begin{solution}
     Let \((d_1,d_2,\dots,d_{n(G)})\) be the degree sequence of the graph \(G\)
