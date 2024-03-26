@@ -10,7 +10,7 @@
 
 \title{MTH 4140 Homework 2}
 \author{Yaohui Wu}
-\date{March 20, 2024}
+\date{March 26, 2024}
 
 \begin{document}
 \maketitle
@@ -127,7 +127,7 @@
     is proved that the diameter and radius of the bicilique \(K_{m,n}\) is 2.
 \end{solution}
 \section*{Problem 8}
-\subsection*{Section 1.3 Problem 29}
+\subsection*{Section 2.1 Problem 29}
 \begin{solution}
     Suppose that every tree does not have a leaf in its larger partite set or
     one of the sets if they have equal size for the sake of contradiction. Let
@@ -141,5 +141,24 @@
     n\] but \[e(T)=n-1\not\geq n\] so there is a contradiction. Therefore, it
     is proved that every tree has a leaf in its larger partite set or in both
     if they have equal size.
+\end{solution}
+\section*{Problem 9}
+\begin{solution}
+    
+\end{solution}
+\section*{Problem 10}
+\subsection*{Section 2.1 Problem 49}
+\begin{solution}
+    Let \(u,v\) be vertices of \(G\) s.t. \(\textrm{d}(u,v)\geq3\), \(P\) be a
+    shortest \(u,v\)-path, \(w\) be the third vertex from \(u\) on \(P\), and
+    \(x\) be a vertex not on \(P\). The edges \(\{u,x\},\{w,x\}\) cannot both
+    exist simultaneously in \(G\) since otherwise \(P\) will not be the
+    shortest \(u,v\)-path. Hence, at least one of \(\{u,x\},\{w,x\}\) does not
+    exist in \(G\) so one or both of them exist in \(\overline{G}\). In
+    addition, the edges with endpoints \(u\) and each of the other vertices in
+    \(P\) are in \(\overline{G}\). We have \(\epsilon(v)\leq2\) for any vertex
+    \(v\) in \(\overline{G}\) so \(\textrm{rad}(\overline{G})\leq2\).
+    Therefore, it is proved that in a simple graph \(G\), \(\textrm{rad}(G)
+    \geq3\implies\textrm{rad}(\overline{G})\leq2\).
 \end{solution}
 \end{document}
