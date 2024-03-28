@@ -1,5 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{mlmodern}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
@@ -10,7 +11,7 @@
 
 \title{MTH 4140 Homework 2}
 \author{Yaohui Wu}
-\date{March 26, 2024}
+\date{March 28, 2024}
 
 \begin{document}
 \maketitle
@@ -54,7 +55,7 @@
     represent 13 teams in the same division. Suppose the proposition is true,
     each of the 13 vertices in \(H\) will have degree \(9\). Then the sum of
     the degrees in \(H\) must be \(13\cdot9\) which must be odd. However, the
-    handshaking lemma states that for a graph \(G=(V,E)\) we have \(\sum_{deg
+    handshaking lemma states that for a graph \(G=(V,E)\) we have \(\sum_{\deg
     (v)\in V}=2|E|\), i.e. the sum of the degrees is twice the number of edges
     which must be even. There is a contradiction and the proposition is false,
     that which was to be demonstrated. Therefore, it is proved that for a
@@ -127,6 +128,21 @@
     is proved that the diameter and radius of the bicilique \(K_{m,n}\) is 2.
 \end{solution}
 \section*{Problem 8}
+\subsection*{Section 2.1 Problem 18}
+\begin{solution}
+    Let \(T\) be a tree on \(n\) vertices with one vertex having maximum
+    degrees \(\Delta\) and \(l\) be the number of leaves. Thus there are \(n-l
+    -1\) remaining vertices with degrees at least 2. The sum of the degrees in
+    \(T\) is
+    \begin{align*}
+        \sum_{v\in V(T)}\deg(v)=2\cdot e(T)=2(n-1)&\geq 1\cdot\Delta+(
+            n-l-1)(2)+l\cdot1\\2n-2&\geq \Delta+2n-2l-2+l\\l&\geq \Delta
+    \end{align*}
+    Hence, the number of leaves in \(T\) is at least \(\Delta\). Therefore, it
+    is proved that every tree with maximum degree \(\Delta>1\) has at least \(
+    \Delta\) vertices of degree 1.
+\end{solution}
+\section*{Problem 9}
 \subsection*{Section 2.1 Problem 29}
 \begin{solution}
     Suppose that every tree does not have a leaf in its larger partite set or
@@ -141,10 +157,6 @@
     n\] but \[e(T)=n-1\not\geq n\] so there is a contradiction. Therefore, it
     is proved that every tree has a leaf in its larger partite set or in both
     if they have equal size.
-\end{solution}
-\section*{Problem 9}
-\begin{solution}
-    
 \end{solution}
 \section*{Problem 10}
 \subsection*{Section 2.1 Problem 49}
