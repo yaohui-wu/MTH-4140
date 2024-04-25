@@ -4,28 +4,34 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
 \newenvironment*{solution}{\begin{proof}[Solution]}{\end{proof}}
 \renewcommand*{\qedsymbol}{\(\blacksquare\)}
 
-\title{MTH 4140 Homework 3}
+\title{MTH 4140 Graph Theory}
 \author{Yaohui Wu}
 \date{April 24, 2024}
 
 \begin{document}
 \maketitle
-\section*{Problem 1}
-\subsection*{Section 2.3 Exercise 3}
+\section*{Homework 3}
+\section*{Introduction to Graph Theory}
+\subsection*{Chapter 2 Trees and Distances}
+
+\subsubsection*{Section 2.2 Spanning Trees and Enumeration}
+
+\subsubsection*{Section 2.3 Optimization and Trees}
+\begin{problem}
+    Exercise 2.3.8
+\end{problem}
 \begin{solution}
     We run Kruskal's algorithm to get a minimum spanning tree (MST) of the
     graph built from the given adjacency matrix. The total weight of the MST
     is \[3+3+7+8=21\] The least cost of making all the cities reachable from
     each other is 21.
 \end{solution}
-\section*{Problem 2}
-\section*{Problem 3}
-\section*{Problem 4}
-\section*{Problem 5}
-\section*{Problem 6}
-\section*{Problem 7}
-\section*{Problem 8}
+
+\subsection*{Chapter 3 Matchings and Factors}
+\subsubsection*{Section 3.1 Matchings and Covers}
 \end{document}
