@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{mlmodern}
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 
@@ -11,7 +12,7 @@
 
 \title{MTH 4140 Graph Theory}
 \author{Yaohui Wu}
-\date{April 25, 2024}
+\date{April 26, 2024}
 
 \begin{document}
 \maketitle
@@ -32,6 +33,17 @@
 \begin{problem}
     Exercise 2.2.8(a)
 \end{problem}
+\begin{solution}
+    We can choose two leaves in \(\binom{n}{2}\) ways since they do not appear
+    in the Prüfer code. There are \((n-2)!\) permutations of the labels in the
+    Prüfer code. There are
+    \[\binom{n}{2}(n-2)! = \frac{n(n-1)(n-2)!}{2} = \frac{n!}{2}\]
+    trees with only two leaves. Trees that have only two leaves are
+    the paths. There are \(n!\) permutations of the vertices in a path with
+    vertex set \([n]\). We adjust for overcount of isomorphic paths so there
+    are \(\dfrac{n!}{2}\) paths. The number of trees with vertex set \([n]\)
+    that have only two leaves is \(\dfrac{n!}{2}\).
+\end{solution}
 
 \subsubsection*{Section 2.3 Optimization and Trees}
 \begin{problem}
