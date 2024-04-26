@@ -67,6 +67,16 @@
 \begin{problem}
     Exercise 3.1.2
 \end{problem}
+\begin{solution}
+    Suppose that \(C_n\) has a maximal matching \(M\) of size \(k\). There are
+    \(k\) matched edges that map to \(n-2k\) unsaturated vertices in \(M\).
+    Since the matching is maximal, every matched edge maps to at most one
+    unsaturated vertex which implies that this is a set of at most 3 vertices.
+    By the Pigeonhole principle, there are
+    \(\left\lceil \dfrac{n}{3} \right\rceil\) such sets in a cycle \(C_n\) of
+    \(n\) vertices. The minimum size of a maximal matching in the cycle
+    \(C_n\) is \(\left\lceil \dfrac{n}{3} \right\rceil\).
+\end{solution}
 \begin{problem}
     Exercise 3.1.8
 \end{problem}
