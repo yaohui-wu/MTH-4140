@@ -29,10 +29,13 @@
     stars. (c) The trees with Prüfer codes that have distinct values in all
     positions are the paths.
 \end{solution}
+\begin{problem}
+    Exercise 2.2.8(a)
+\end{problem}
 
 \subsubsection*{Section 2.3 Optimization and Trees}
 \begin{problem}
-    Exercise 2.3.8
+    Exercise 2.3.3
 \end{problem}
 \begin{solution}
     We run Kruskal's algorithm to get a minimum spanning tree (MST) of the
@@ -40,7 +43,36 @@
     is \[3+3+7+8=21\] The least cost of making all the cities reachable from
     each other is 21.
 \end{solution}
+\begin{problem}
+    Exercise 2.3.7
+\end{problem}
+\begin{problem}
+    Exercise 2.3.26
+\end{problem}
 
 \subsection*{Chapter 3 Matchings and Factors}
 \subsubsection*{Section 3.1 Matchings and Covers}
+\begin{problem}
+    Exercise 3.1.2
+\end{problem}
+\begin{problem}
+    Exercise 3.1.8
+\end{problem}
+\begin{solution}
+    Suppose that a tree \(T\) has two different perfect matchings \(M\) and
+    \(M'\). Consider the symmetric difference of the edge sets of \(M\) and
+    \(M'\) denoted by \(M\triangle M'\). If a vertex is incidental to the same
+    edge in both perfect matchings, then it is an isolated vertex in the
+    symmetric difference. Otherwise, the vertex is incidental to two different
+    edges in the symmetric difference. Hence, every vertex of
+    \(M\triangle M'\) must has degree 0 or 2. We know that every component of
+    \(M\triangle M'\) must be a path or an even cycle. Since \(T\) is a tree
+    and trees have no cycles so every component of \(M\triangle M'\) must be
+    an isolated vertex with degree 0. This implies that the two perfect
+    matchings are the same but there is a contradiction. Therefore, it is
+    proved that every tree has at most one perfect matching.
+\end{solution}
+\begin{problem}
+    Exercise 3.1.16
+\end{problem}
 \end{document}
