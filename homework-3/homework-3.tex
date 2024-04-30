@@ -12,7 +12,7 @@
 
 \title{MTH 4140 Graph Theory}
 \author{Yaohui Wu}
-\date{April 26, 2024}
+\date{April 30, 2024}
 
 \begin{document}
 \maketitle
@@ -58,6 +58,17 @@
 \begin{problem}
     Exercise 2.3.7
 \end{problem}
+\begin{solution}
+    Suppose a graph \(G\) with distinct edge weights has two different minimum
+    spanning trees \(T\) and \(T'\). Let \(e\) be the lightest edge of the
+    symmetric difference. Since the edge weights are distinct, so \(e\) is in
+    exactly one of the two trees. WLOG, if \(e\) is in \(E(T)\), then there
+    exists an edge \(e'\) in \(E(T')\) in the symmetric difference such that
+    \(T'-e'+e\) is a spanning tree. Thus, we have \(w(e) < w(e')\) so
+    \[w(T'-e'+e) < w(T')\] which is a contradiction since we assumed that
+    \(T'\) is an MST. It is proved that a weighted connected graph \(G\) with
+    distinct edge weights has only one minimum spanning tree.
+\end{solution}
 \begin{problem}
     Exercise 2.3.26
 \end{problem}
