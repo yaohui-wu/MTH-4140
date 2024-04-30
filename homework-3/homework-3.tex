@@ -118,4 +118,17 @@
 \begin{problem}
     Exercise 3.1.16
 \end{problem}
+\begin{solution}
+    Let \(M_k\) be the number of perfect matchings of the \(k\)-dimensional
+    hypercube \(Q_k\) for \(k\geq 2\). We can use proof by induction to show
+    that \(M_k\leq 2^{2^{k-2}}\). When \(k=2\), we have
+    \[M_2 \leq 2^{2^{2-2}} = 2\] which is true. We assume that
+    \(M_k \leq 2^{2^{k-2}}\) for \(k>2\). The number of perfect matchings in
+    \(Q_{k+1}\) is the the number of ways to choose the perfect matchings in
+    each of the two disjoint \(Q_{k}\) from \(Q_{k+1}\). Thus, we have
+    \[M_{k+1} \leq M^2_k \leq (2^{2^{k-2}})^2 \leq 2^{2^{k-1}}
+    = 2^{2^{(k+1)-2}}\] By mathematical induction, we can deduce that
+    \[M_k \leq 2^{2^{k-2}}\] is true for \(k\geq2\). It is proved that for
+    \(k\geq2\), \(Q_k\) has at least \(2^{2^{k-2}}\) perfect matchings.
+\end{solution}
 \end{document}
