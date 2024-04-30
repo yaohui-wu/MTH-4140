@@ -64,7 +64,7 @@
     symmetric difference. Since the edge weights are distinct, so \(e\) is in
     exactly one of the two trees. WLOG, if \(e\) is in \(E(T)\), then there
     exists an edge \(e'\) in \(E(T')\) in the symmetric difference such that
-    \(T'-e'+e\) is a spanning tree. Thus, we have \(w(e) < w(e')\) so
+    \(T'-e'+e\) is a spanning tree. Thus, we have \(w(e)<w(e')\) so
     \[w(T'-e'+e) < w(T')\] which is a contradiction since we assumed that
     \(T'\) is an MST. It is proved that a weighted connected graph \(G\) with
     distinct edge weights has only one minimum spanning tree.
@@ -72,6 +72,16 @@
 \begin{problem}
     Exercise 2.3.26
 \end{problem}
+\begin{solution}
+    Let \(a_n\) be the recurrence relation of the number of binary trees with
+    \(n+1\) leaves. There is only one binary tree with one leaf when \(n=0\)
+    so \(a_0=1\). In general when \(n>0\), for each tree there are \(k\)
+    leaves in the left subtree and \(n-k+1\) leaves in the right subtree from
+    the root where \(1\leq k\leq n\). The recurrence relation is
+    \begin{align*}
+        a_0 &= 1 \\ a_n &= \sum_{k=1}^n a_{k-1}a_{n-k},n>0
+    \end{align*}
+\end{solution}
 
 \subsection*{Chapter 3 Matchings and Factors}
 \subsubsection*{Section 3.1 Matchings and Covers}
