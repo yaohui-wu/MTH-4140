@@ -24,17 +24,24 @@
     Excercise 4.1.1
 \end{problem}
 \begin{solution}
-    (a) We know that a graph is \(k\)-connected if its vertex connectivity is at least \(k\).
-    If a graph \(G\) is 2-connected, then its vertex connectivity is at least 2.
-    Given \(G\) has vertex connectivity 4 so we have \(\kappa(G)=4\geq2\) which is true.
+    (a) A graph is \(k\)-vertex-connected if its vertex-connectivity is at least \(k\).
+    If a graph \(G\) is 2-connected, then its vertex-connectivity is at least 2.
+    Given \(G\) has vertex-connectivity 4 so we have \(\kappa(G)=4\geq2\) which is true.
     The statement ``Every graph with connectivity 4 is 2-connected." is true. \\
-    (b) A 3-connected graph \(G\) has vertex connectivity at least 3 so \(\kappa(G)\geq3\).
+    (b) A 3-connected graph \(G\) has vertex-connectivity at least 3 so \(\kappa(G)\geq3\).
     Consider the graph \(K_5\), we know that \(\kappa(G)\leq\delta(G)\) so \(\kappa(K_5)\leq4\).
     We know that \(\kappa(K_n)=n-1\) so we get that \(\kappa(K_5)=4>3\).
-    This is a counterexample since \(K_5\) is 3-connected but it has vertex connectivity 4.
+    This is a counterexample since \(K_5\) is 3-connected but it has vertex-connectivity 4.
     The statement ``Every 3-connected graph has connectivity 3.'' is false. \\
-    (c) The statement ``Every \(k\)-connected graph is \(k\)-edge-connected.'' is true. \\
-    (d) The statement ``Every \(k\)-edge-connected graph is \(k\)-connected.'' is false.
+    (c) A graph is \(k\)-edge-connected if every disconnecting set has at least \(k\) edges.
+    Consider a \(k\)-vertex-connected graph \(G\), we know that \(\kappa(G)\leq\kappa'(G)\) from Whitney's theorem.
+    We can deduce that \[k \leq \kappa(G) \leq \kappa'(G) \]
+    The edge-connectivity \(\kappa'(G)\) is the minimum size of a disconnecting set and it is at least \(k\) so \(G\) is \(k\)-edge-connected.
+    The statement ``Every \(k\)-connected graph is \(k\)-edge-connected.'' is true. \\
+    (d) Consider a \(k\)-edge-connected graph \(G\) with vertex-connectivity \(\kappa(G)\) and \\ edge-connectivity \(\kappa'(G)\).
+    We have \(\kappa(G)\leq\kappa'(G)\) and \(k\leq\kappa'(G)\).
+    If \(k>\kappa(G)\), then we have \[\kappa(G)<k\leq\kappa'(G)\] and Whitney's theorem still holds so \(G\) is not \(k\)-vertex-connected. \\
+    The statement ``Every \(k\)-edge-connected graph is \(k\)-connected.'' is false.
 \end{solution}
 
 \subsection*{Chapter 5 Coloring of Graphs}
