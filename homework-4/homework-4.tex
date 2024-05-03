@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{mlmodern}
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 
@@ -50,11 +51,24 @@
 \end{problem}
 \begin{solution}
     Let \(G\) be the graph on the right, we see that \(G\) is a 4-regular graph so the minimum degree of \(G\) is 4.
-    Since every vertex is connected to four other vertices, we must remove all four incidental edges of an arbitrary vertex at minimum to disconnect the graph.
+    Since every vertex is connected to four other vertices,
+    we must remove all four incidental edges of an arbitrary vertex at minimum to disconnect the graph.
     Similarly, we must remove all four adjacent vertices of an arbitrary vertex at minimum to disconnect the graph.
     Therefore, the edge-connectivity of \(G\) is 4 and the vertex-connectivity of \(G\) is 4.
     The vertex-connectivity \(\kappa(G)\), edge-connectivity \(\kappa'(G)\), and the minimum degree \(\delta(G)\) are
     \[\kappa(G) = \kappa'(G) = \delta(G) = 4\] which follows immediately from Whitney's theorem.
+\end{solution}
+
+\begin{problem}
+    Excercise 4.1.11
+\end{problem}
+\begin{solution}
+    We can show the following by Whitney's theorem
+    \begin{align*}
+        \kappa(G) \leq \kappa'(G) &\leq \delta(G) \leq \Delta(G) \leq 3 \\
+        \kappa(G) \leq \kappa'(G) &\leq 3
+    \end{align*}
+    It is proved that \(\kappa'(G)=\kappa(G)\) when \(G\) is a simple graph with \(\Delta(G)\leq3\).
 \end{solution}
 
 \subsection*{Chapter 5 Coloring of Graphs}
