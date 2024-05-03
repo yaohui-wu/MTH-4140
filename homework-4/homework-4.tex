@@ -20,6 +20,7 @@
 
 \subsection*{Chapter 4 Connectivity and Paths}
 \subsection*{Section 4.1 Cuts and Connectivity}
+
 \begin{problem}
     Excercise 4.1.1
 \end{problem}
@@ -42,6 +43,19 @@
     We have \(\kappa(G)\leq\kappa'(G)\) and \(k\leq\kappa'(G)\).
     If \(k>\kappa(G)\), then we have \[\kappa(G)<k\leq\kappa'(G)\] and Whitney's theorem still holds so \(G\) is not \(k\)-vertex-connected. \\
     The statement ``Every \(k\)-edge-connected graph is \(k\)-connected.'' is false.
+\end{solution}
+
+\begin{problem}
+    Excercise 4.1.8(b)
+\end{problem}
+\begin{solution}
+    Let \(G\) be the graph on the right, we see that \(G\) is a 4-regular graph so its minimum degree is 4.
+    Since every vertex is connected to four other vertices, we must remove all four incidental edges of an arbitrary vertex to disconnect the graph.
+    Therefore, the edge-connectivity of \(G\) is 4.
+    Similarly, we must remove all four adjacent vertices of an arbitrary vertex to disconnect the graph.
+    Therefore, the vertex-connectivity is 4.
+    The vertex-connectivity \(\kappa(G)\), edge-connectivity \(\kappa'(G)\), and the minimum degree \(\delta(G)\) is
+    \[\kappa(G) = \kappa'(G) = \delta(G) = 4\] which follows immediately from Whitney's theorem.
 \end{solution}
 
 \subsection*{Chapter 5 Coloring of Graphs}
