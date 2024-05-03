@@ -1,7 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{mlmodern}
-\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 
@@ -26,23 +25,23 @@
     Excercise 4.1.1
 \end{problem}
 \begin{solution}
-    (a) A graph is \(k\)-vertex-connected if its vertex-connectivity is at least \(k\).
-    If a graph \(G\) is 2-connected, then its vertex-connectivity is at least 2.
-    Given \(G\) has vertex-connectivity 4 so we have \(\kappa(G)=4\geq2\) which is true.
+    (a) A graph is \(k\)-connected if its connectivity is at least \(k\).
+    If a graph \(G\) is 2-connected, then its connectivity is at least 2.
+    Given \(G\) has connectivity 4 so we have \(\kappa(G)=4\geq2\) which is true.
     The statement ``Every graph with connectivity 4 is 2-connected." is true. \\
-    (b) A 3-connected graph \(G\) has vertex-connectivity at least 3 so \(\kappa(G)\geq3\).
+    (b) A 3-connected graph \(G\) has connectivity at least 3 so \(\kappa(G)\geq3\).
     Consider the graph \(K_5\), we know that \(\kappa(G)\leq\delta(G)\) so \(\kappa(K_5)\leq4\).
     We know that \(\kappa(K_n)=n-1\) so we get that \(\kappa(K_5)=4>3\).
-    This is a counterexample since \(K_5\) is 3-connected but it has vertex-connectivity 4.
+    This is a counterexample since \(K_5\) is 3-connected but it has connectivity 4.
     The statement ``Every 3-connected graph has connectivity 3.'' is false. \\
     (c) A graph is \(k\)-edge-connected if every disconnecting set has at least \(k\) edges.
-    Consider a \(k\)-vertex-connected graph \(G\), we know that \(\kappa(G)\leq\kappa'(G)\) from Whitney's theorem.
+    Consider a \(k\)-connected graph \(G\), we know that \(\kappa(G)\leq\kappa'(G)\) from Whitney's theorem.
     We can deduce that \[k \leq \kappa(G) \leq \kappa'(G) \]
     The edge-connectivity \(\kappa'(G)\) is the minimum size of a disconnecting set and it is at least \(k\) so \(G\) is \(k\)-edge-connected.
     The statement ``Every \(k\)-connected graph is \(k\)-edge-connected.'' is true. \\
-    (d) Consider a \(k\)-edge-connected graph \(G\) with vertex-connectivity \(\kappa(G)\) and \\ edge-connectivity \(\kappa'(G)\).
+    (d) Consider a \(k\)-edge-connected graph \(G\) with connectivity \(\kappa(G)\) and \\ edge-connectivity \(\kappa'(G)\).
     We have \(\kappa(G)\leq\kappa'(G)\) and \(k\leq\kappa'(G)\).
-    If \(k>\kappa(G)\), then we have \[\kappa(G)<k\leq\kappa'(G)\] and Whitney's theorem still holds so \(G\) is not \(k\)-vertex-connected. \\
+    If \(k>\kappa(G)\), then we have \[\kappa(G)<k\leq\kappa'(G)\] and Whitney's theorem still holds so \(G\) is not \(k\)-connected. \\
     The statement ``Every \(k\)-edge-connected graph is \(k\)-connected.'' is false.
 \end{solution}
 
@@ -52,10 +51,10 @@
 \begin{solution}
     Let \(G\) be the graph on the right, we see that \(G\) is a 4-regular graph so the minimum degree of \(G\) is 4.
     Since every vertex is connected to four other vertices,
-    we must remove all four incidental edges of an arbitrary vertex at minimum to disconnect the graph.
-    Similarly, we must remove all four adjacent vertices of an arbitrary vertex at minimum to disconnect the graph.
-    Therefore, the edge-connectivity of \(G\) is 4 and the vertex-connectivity of \(G\) is 4.
-    The vertex-connectivity \(\kappa(G)\), edge-connectivity \(\kappa'(G)\), and the minimum degree \(\delta(G)\) are
+    we must remove 4 incidental edges of any vertex at minimum to disconnect the graph.
+    Similarly, we must remove 4 adjacent vertices of any vertex at minimum to disconnect the graph.
+    Therefore, the edge-connectivity of \(G\) is 4 and the connectivity of \(G\) is 4.
+    The connectivity \(\kappa(G)\), edge-connectivity \(\kappa'(G)\), and the minimum degree \(\delta(G)\) are
     \[\kappa(G) = \kappa'(G) = \delta(G) = 4\] which follows immediately from Whitney's theorem.
 \end{solution}
 
@@ -64,10 +63,19 @@
 \end{problem}
 \begin{solution}
     We can show the following by Whitney's theorem
-    \begin{align*}
-        \kappa(G) \leq \kappa'(G) &\leq \delta(G) \leq \Delta(G) \leq 3 \\
-        \kappa(G) \leq \kappa'(G) &\leq 3
-    \end{align*}
+    \[1 \leq \kappa(G) \leq \kappa'(G) \leq \delta(G) \leq \Delta(G) \leq 3\]
+    If \(\delta(G)=1\), then we have \[1 \leq \kappa(G) \leq \kappa'(G) \leq 1\]
+    which implies that \[\kappa(G) = \kappa'(G) = 1\]
+    If \(\delta(G)=2\), then we have
+    \[1 \leq \kappa(G) \leq \kappa'(G) \leq \delta(G)=2 \leq \Delta(G) \leq 3\]
+    If \(\Delta(G)=2\) so \(G\) is a cycle, then it is 2-regular.
+    We must remove 2 incidental edges or 2 adjacent vertices of any vertex at minimum to disconnect a cycle.
+    If \(\Delta(G)=3\) so \(G\) is not a cycle.
+    It follows that \[\kappa(G) = \kappa'(G)\] when \(\delta(G)=2\).
+    If \(\delta(G)=3\), then we have
+    \[1 \leq \kappa(G) \leq \kappa'(G) \leq \delta(G)=\Delta(G)=3\]
+    Since \(G\) is 3-regular, we must remove 3 vertices or 3 edges at minimum to disconnect \(G\)
+    so \[\kappa(G) = \kappa'(G)\] when \(\delta(G)=3\).
     It is proved that \(\kappa'(G)=\kappa(G)\) when \(G\) is a simple graph with \(\Delta(G)\leq3\).
 \end{solution}
 
