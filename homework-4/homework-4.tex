@@ -11,7 +11,7 @@
 
 \title{MTH 4140 Graph Theory}
 \author{Yaohui Wu}
-\date{May 2, 2024}
+\date{May 5, 2024}
 
 \begin{document}
 \maketitle
@@ -62,20 +62,6 @@
     Excercise 4.1.11
 \end{problem}
 \begin{solution}
-    We can show the following by Whitney's theorem
-    \[1 \leq \kappa(G) \leq \kappa'(G) \leq \delta(G) \leq \Delta(G) \leq 3\]
-    If \(\delta(G)=1\), then we have \[1 \leq \kappa(G) \leq \kappa'(G) \leq 1\]
-    which implies that \[\kappa(G) = \kappa'(G) = 1\]
-    If \(\delta(G)=2\), then we have
-    \[1 \leq \kappa(G) \leq \kappa'(G) \leq \delta(G)=2 \leq \Delta(G) \leq 3\]
-    If \(\Delta(G)=2\) so \(G\) is a cycle, then it is 2-regular.
-    We must remove 2 incidental edges or 2 adjacent vertices of any vertex at minimum to disconnect a cycle.
-    If \(\Delta(G)=3\) so \(G\) is not a cycle.
-    It follows that \[\kappa(G) = \kappa'(G)\] when \(\delta(G)=2\).
-    If \(\delta(G)=3\), then we have
-    \[1 \leq \kappa(G) \leq \kappa'(G) \leq \delta(G)=\Delta(G)=3\]
-    Since \(G\) is 3-regular, we must remove 3 vertices or 3 edges at minimum to disconnect \(G\)
-    so \[\kappa(G) = \kappa'(G)\] when \(\delta(G)=3\).
     It is proved that \(\kappa'(G)=\kappa(G)\) when \(G\) is a simple graph with \(\Delta(G)\leq3\).
 \end{solution}
 
