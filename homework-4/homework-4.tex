@@ -26,42 +26,62 @@
 \begin{solution}
     (a) A graph is \(k\)-connected if its connectivity is at least \(k\).
     If a graph \(G\) is 2-connected, then its connectivity is at least 2.
-    Given \(G\) has connectivity 4 so we have \(\kappa(G)=4\geq2\) which is true.
-    The statement ``Every graph with connectivity 4 is 2-connected." is true. \\
-    (b) A 3-connected graph \(G\) has connectivity at least 3 so \(\kappa(G)\geq3\).
-    Consider the graph \(K_5\), we know that \(\kappa(G)\leq\delta(G)\) so \(\kappa(K_5)\leq4\).
+    Given \(G\) has connectivity 4 so we have \(\kappa(G)=4\geq2\) which is
+    true.
+    The statement ``Every graph with connectivity 4 is 2-connected." is
+    true. \\
+    (b) A 3-connected graph \(G\) has connectivity at least 3 so
+    \(\kappa(G)\geq3\).
+    Consider the graph \(K_5\), we know that \(\kappa(G)\leq\delta(G)\) so
+    \(\kappa(K_5)\leq4\).
     We know that \(\kappa(K_n)=n-1\) so we get that \(\kappa(K_5)=4>3\).
-    This is a counterexample since \(K_5\) is 3-connected but it has connectivity 4.
+    This is a counterexample since \(K_5\) is 3-connected but it has
+    connectivity 4.
     The statement ``Every 3-connected graph has connectivity 3.'' is false. \\
-    (c) A graph is \(k\)-edge-connected if every disconnecting set has at least \(k\) edges.
-    Consider a \(k\)-connected graph \(G\), we know that \(\kappa(G)\leq\kappa'(G)\) from Whitney's theorem.
+    (c) A graph is \(k\)-edge-connected if every disconnecting set has at
+    least \(k\) edges.
+    Consider a \(k\)-connected graph \(G\), we know that
+    \(\kappa(G)\leq\kappa'(G)\) from Whitney's theorem.
     We can deduce that \[k \leq \kappa(G) \leq \kappa'(G) \]
-    The edge-connectivity \(\kappa'(G)\) is the minimum size of a disconnecting set and it is at least \(k\) so \(G\) is \(k\)-edge-connected.
-    The statement ``Every \(k\)-connected graph is \(k\)-edge-connected.'' is true. \\
-    (d) Consider a \(k\)-edge-connected graph \(G\) with connectivity \(\kappa(G)\) and \\ edge-connectivity \(\kappa'(G)\).
+    The edge-connectivity \(\kappa'(G)\) is the minimum size of a
+    disconnecting set and it is at least \(k\) so \(G\) is
+    \(k\)-edge-connected.
+    The statement ``Every \(k\)-connected graph is \(k\)-edge-connected.'' is
+    true. \\
+    (d) Consider a \(k\)-edge-connected graph \(G\) with connectivity
+    \(\kappa(G)\) and \\ edge-connectivity \(\kappa'(G)\).
     We have \(\kappa(G)\leq\kappa'(G)\) and \(k\leq\kappa'(G)\).
-    If \(k>\kappa(G)\), then we have \[\kappa(G)<k\leq\kappa'(G)\] and Whitney's theorem still holds so \(G\) is not \(k\)-connected. \\
-    The statement ``Every \(k\)-edge-connected graph is \(k\)-connected.'' is false.
+    If \(k>\kappa(G)\), then we have \[\kappa(G)<k\leq\kappa'(G)\] and
+    Whitney's theorem still holds so \(G\) is not \(k\)-connected. \\
+    The statement ``Every \(k\)-edge-connected graph is \(k\)-connected.'' is
+    false.
 \end{solution}
 
 \begin{problem}
     Excercise 4.1.8(b)
 \end{problem}
 \begin{solution}
-    Let \(G\) be the graph on the right, we see that \(G\) is a 4-regular graph so the minimum degree of \(G\) is 4.
+    Let \(G\) be the graph on the right, we see that \(G\) is a 4-regular
+    graph so the minimum degree of \(G\) is 4.
     Since every vertex is connected to four other vertices,
-    we must remove 4 incidental edges of any vertex at minimum to disconnect the graph.
-    Similarly, we must remove 4 adjacent vertices of any vertex at minimum to disconnect the graph.
-    Therefore, the edge-connectivity of \(G\) is 4 and the connectivity of \(G\) is 4.
-    The connectivity \(\kappa(G)\), edge-connectivity \(\kappa'(G)\), and the minimum degree \(\delta(G)\) are
-    \[\kappa(G) = \kappa'(G) = \delta(G) = 4\] which follows immediately from Whitney's theorem.
+    we must remove 4 incidental edges of any vertex at minimum to disconnect
+    the graph.
+    Similarly, we must remove 4 adjacent vertices of any vertex at minimum to
+    disconnect the graph.
+    Therefore, the edge-connectivity of \(G\) is 4 and the connectivity of
+    \(G\) is 4.
+    The connectivity \(\kappa(G)\), edge-connectivity \(\kappa'(G)\), and the
+    minimum degree \(\delta(G)\) are
+    \[\kappa(G) = \kappa'(G) = \delta(G) = 4\] which follows immediately from
+    Whitney's theorem.
 \end{solution}
 
 \begin{problem}
     Excercise 4.1.11
 \end{problem}
 \begin{solution}
-    It is proved that \(\kappa'(G)=\kappa(G)\) when \(G\) is a simple graph with \(\Delta(G)\leq3\).
+    It is proved that \(\kappa'(G)=\kappa(G)\) when \(G\) is a simple graph
+    with \(\Delta(G)\leq3\).
 \end{solution}
 
 \subsection*{Chapter 5 Coloring of Graphs}
@@ -70,7 +90,12 @@
     Excercise 5.1.14
 \end{problem}
 \begin{solution}
-    
+    We can use the same color to color the vertices in the maximum independent
+    set.
+    Then we can use different colors to color the rest of the vertices.
+    Therefore, we get a proper color of the graph.
+    It is proved that for every graph \(G\), \(\chi(G) \leq n(G)-\alpha(G)+1\)
+    is true.
 \end{solution}
 
 \subsection*{Section 5.2 Structure of \(k\)-chromatic Graphs}
@@ -78,7 +103,15 @@
     Excercise 5.2.1
 \end{problem}
 \begin{solution}
-    
+    Suppose \(G\) is not a complete graph such that
+    \(\chi(G-x-y) = \chi(G)-2\).
+    Let \(x,y\) be two non-adjacent vertices so we can color them with the
+    same color.
+    It follows that \[\chi(G) = \chi(G-x-y)+1\] which implies that
+    \[\chi(G-x-y) = \chi(G)-1\]
+    Hence, there is a contradiction thus every pair of distinct vertices in
+    \(G\) must be adjacent which implies that \(G\) is a complete graph.
+    Therefore, if \(\chi(G-x-y) = \chi(G)-2\), then \(G\) is a complete graph.
 \end{solution}
 
 \subsection*{Section 5.3 Enumerative Aspects}
