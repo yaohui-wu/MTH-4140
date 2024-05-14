@@ -89,6 +89,19 @@
     Excercise 4.1.11
 \end{problem}
 \begin{solution}
+    Let \(S\) be a minimum vertex cut and since \(\kappa(G)\leq\kappa'(G)\) by
+    Whitney's theorem, we only need an edge cut of size \(|S|=\kappa(G)\).
+    Let \(H_1\) and \(H_2\) be two components of \(G-S\).
+    Since \(S\) is minimum, every vertex \(v\) in \(S\) has a neighbor in \(H_1\)
+    and a neighbor in \(H_2\).
+    Given \(\Delta(G)\leq3\), \(v\) cannot have two neighbors in \(H_1\) and two
+    neighbors in \(H_2\).
+    For each \(v\in S\), delete the incidental edge in the component where
+    \(v\) has only one neighbor.
+    If all incidnetal edges to both components satisfy the condition, then we
+    simply delete all incidental edges to one of the components.
+    Thus, we get a disconnecting set of edges \(S'\) with minimum size
+    \(|S'|=\kappa'(G)=|S|=\kappa(G)\).
     It is proved that \(\kappa'(G)=\kappa(G)\) when \(G\) is a simple graph
     with \(\Delta(G)\leq3\).
 \end{solution}
