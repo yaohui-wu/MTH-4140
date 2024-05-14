@@ -178,7 +178,19 @@
     Excercise 5.3.5
 \end{problem}
 \begin{solution}
-    
+    If \(n=1\), then we have a path of 2 vertices so \(\chi(G_1;k)=k(k-1)\)
+    and the polynomial gives
+    \[(k^2-3k+3)^{n-1}k(k-1) = (k^2-3k+3)^{1-1}k(k-1) = k(k-1)\]
+    which is true.
+    Assume that the polynomial is true for \(n\geq1\).
+    Observe that \(\chi(G_n;k)=(k^2-3k+3)\chi(G_{n-1};k)\) by counting.
+    Therefore, we have
+    \begin{align*}
+        \chi(G_{n+1};k) &= (k^2-3k+3)\chi(G_{n};k)
+        = (k^2-3k+3)(k^2-3k+3)^{n-1}k(k-1) \\
+        &= (k^2-3k+3)^nk(k-1)
+    \end{align*}
+    It is proved that \(\chi(G_n;k) = (k^2-3k+3)^{n-1}k(k-1)\).
 \end{solution}
 
 \begin{problem}
