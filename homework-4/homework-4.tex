@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[letterpaper, margin=1in]{geometry}
 \usepackage{mlmodern}
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amssymb}
 
@@ -11,7 +12,7 @@
 
 \title{MTH 4140 Graph Theory}
 \author{Yaohui Wu}
-\date{May 12, 2024}
+\date{May 13, 2024}
 
 \begin{document}
 \maketitle
@@ -145,6 +146,31 @@
     Excercise 5.3.4(a)
 \end{problem}
 \begin{solution}
+    We can use mathematical induction to prove that the formula is true.
+    The least vertices a simple cycle has is 3.
+    If \(n=3\), then \(\chi(C_3;k)=k(k-1)(k-2)=k^3-3k^2+2k\) by counting the
+    number of ways to choose the proper color of each vertex.
+    The polynomial gives \((k-1)^3+(-1)^3(k-1)=k^3-3k^2+2k\) when \(n=3\) so
+    it is true.
+    For every \(n\geq3\), assume that \(\chi(C_n;k) = (k-1)^n+(-1)^n(k-1)\) is
+    true.
+    If we remove an edge from a cycle of \(n\) vertices, then we get a path of
+    \(n\) vertices.
+    If we contract an edge from a cycle of \(n\) vertices, then we get a cycle
+    of \(n-1\) vertices.
+    The chromatic recurrence gives \(\chi(G;k)=\chi(G-e;k)-\chi(G\cdot e;k)\)
+    and the chromatic polynomial of a tree \(T\) with \(n\) vertices is
+    \(\chi(T;k)=k(k-1)^{n-1}\).
+    The chromatic polynomial of \(C_{n+1}\) is
+    \begin{align*}
+        \chi(C_{n+1};k) &= \chi(C_{n+1}-e;k) - \chi(C_{n+1}\cdot e;k)
+        = \chi(P_{n+1};k) - \chi(C_{n};k) \\
+        &= k(k-1)^{(n+1)-1} - [(k-1)^n+(-1)^n(k-1)] \\
+        &= k(k-1)^n - (k-1)^n + (-1)^{n+1}(k-1) \\
+        &= (k-1)(k-1)^n + (-1)^{n+1}(k-1) \\
+        &= (k-1)^{n+1} + (-1)^{n+1}(k-1)
+    \end{align*}
+    which implies that the formula is true.
     It is proved that \(\chi(C_n;k) = (k-1)^n+(-1)^n(k-1)\).
 \end{solution}
 
