@@ -12,7 +12,7 @@
 
 \title{MTH 4140 Graph Theory}
 \author{Yaohui Wu}
-\date{May 13, 2024}
+\date{May 14, 2024}
 
 \begin{document}
 \maketitle
@@ -115,7 +115,16 @@
     Excercise 5.1.20
 \end{problem}
 \begin{solution}
-    
+    If \(G\) has no odd cycles, then it is bipartite so \(\chi(G)\leq2\).
+    Assume that \(G\) has odd cycles and consider the contrapositive such that
+    if \(\chi(G)\geq6\), then the odd cycles of \(G\) are disjoint.
+    We can have an optimal coloring where the subgraph induced by vertices
+    with colors 1,2,3 must have an odd cycle since they cannot be bipartite
+    which makes the subgraph 2-colorable.
+    Similarly, the subgraph induced by vertices with colors 4,5,6 must have an
+    odd cycle and the two cycles are disjoint.
+    It is proved that if \(G\) is a graph whose odd cycles are pairwise
+    intersecting, then \(\chi(G)\leq5\).
 \end{solution}
 
 \begin{problem}
