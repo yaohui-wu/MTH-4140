@@ -146,6 +146,30 @@
     It is proved that \(\chi(G)+\chi(\overline{G})\leq n(G)+1\).
 \end{solution}
 
+\begin{problem}
+    Excercise 5.1.48
+\end{problem}
+\begin{solution}
+    By Brook's theorem, we have \(\chi(G)\leq\Delta(G)\leq3\) so \(G\) is
+    3-colorable.
+    Consider a proper colorings with colors 1,2,3 where the number of vertices
+    with color 1 is the least.
+    By the pigeonhole principle, there are at most
+    \(\left\lceil\dfrac{n}{3}\right\rceil\) vertices with color 1.
+    Each vertex \(v\) with color 1 has at most three neighbors so by the
+    pigeonhole principle, other vertices with different colors appears at most
+    once in \(N(v)\).
+    If color 2 appears at most once, then we delete the edge from \(v\) to its
+    neighbor with color 2 and change the color of \(v\) to color 2.
+    Similarly, we do the same for color 3.
+    This algorithm deletes at most \(\left\lceil\dfrac{n}{3}\right\rceil\)
+    vertices and we get a bipartite subgraph with two colors.
+    It is proved that if we have a simple graph \(G\) with \(n\) vertices,
+    \(m\) edges, \(\Delta(G)\leq3\), and \(G\) has no component of a complete
+    graph of 4 vertices, then \(G\) contains a bipartite subgraph with at
+    least \(m-\dfrac{n}{3}\) edges.
+\end{solution}
+
 \subsection*{Section 5.2 Structure of \(k\)-chromatic Graphs}
 \begin{problem}
     Excercise 5.2.1
@@ -160,13 +184,6 @@
     Hence, there is a contradiction thus every pair of distinct vertices in
     \(G\) must be adjacent which implies that \(G\) is a complete graph.
     Therefore, if \(\chi(G-x-y) = \chi(G)-2\), then \(G\) is a complete graph.
-\end{solution}
-
-\begin{problem}
-    Excercise 5.2.22
-\end{problem}
-\begin{solution}
-    
 \end{solution}
 
 \subsection*{Section 5.3 Enumerative Aspects}
