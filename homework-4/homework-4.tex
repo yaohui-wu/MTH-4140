@@ -131,7 +131,19 @@
     5.1.41
 \end{problem}
 \begin{solution}
-    
+    If \(n=1\), then \(\chi(G)=\chi(\overline{G})=1\) so we have \(1+1=2\) and
+    the inequality is true.
+    Assume that the inequality is true for \(n\geq1\),
+    for a graph \(G\) with \(n+1\) vertices, let \(G'=G-v\) for \(v\in V(G)\).
+    We get \(\chi(G')+\chi(\overline{G'})\leq n(G')+1\).
+    When we add back \(v\) to get \(G\), then the chromatic number of each
+    graph increases by at most 1 so \(\chi(G)+\chi(\overline{G})\leq n(G)+1\)
+    unless they both increase.
+    If they both increase, then \(v\) must have \(n-1\) neighbors in total in
+    the two graphs so \(\chi(G')+\chi(\overline{G'})\leq n(G')-1\).
+    When we add back \(v\), it follows that
+    \(\chi(G')+\chi(\overline{G'})\leq n(G')+1\).
+    It is proved that \(\chi(G)+\chi(\overline{G})\leq n(G)+1\).
 \end{solution}
 
 \subsection*{Section 5.2 Structure of \(k\)-chromatic Graphs}
